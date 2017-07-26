@@ -4,10 +4,10 @@
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with guardian](#setup)
-    * [What guardian affects](#what-guardian-affects)
+3. [Setup - The basics of getting started with glic](#setup)
+    * [What glic affects](#what-glic-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with guardian](#beginning-with-guardian)
+    * [Beginning with glic](#beginning-with-glic)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -31,7 +31,7 @@ management, etc.) this is the time to mention it.
 
 ## Setup
 
-### What guardian affects
+### What glic affects
 
 * A list of files, packages, services, or operations that the module will alter,
   impact, or execute on the system it's installed on.
@@ -43,7 +43,7 @@ management, etc.) this is the time to mention it.
 If your module requires anything extra before setting up (pluginsync enabled,
 etc.), mention it here.
 
-### Beginning with guardian
+### Beginning with glic
 
 The very basic steps needed for a user to get the module up and running.
 

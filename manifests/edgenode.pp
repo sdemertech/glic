@@ -1,5 +1,5 @@
 class glic::edgenode  {
- class  {'::glic::edgenode::edgenodecfg': }
+ class  {'::glic::edgenode::s3cfgs': }
  class  {'::glic::edgenode::cron': }
 }
 

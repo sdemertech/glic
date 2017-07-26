@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+TIMESTAMP="`date +%Y%m%d%H%M%S`"
+S3BUCKET="<%=@s3bucket %>"
+S3BACKUPDIR="<%=@s3backupdir %>/$TIMESTAMP"
+CFGDIRS="cloudformationtemplates test-folder"
+
+echo "Waking up with timestamp $TIMESTAMP..."
+for DIR  in $CFGDIRS
+do
+        echo "Processing $DIR"
+        echo echo "-- Creating backup files on S3 under $S3BACKUPDIR/$DIR"
+        echo "-- Executing sudo aws s3 cp --sse AES256 /home/ec2-user/guardian/dirs/$DIR/ s3://$S3BUCKET/$S3BACKUPDIR/$DIR/ --recursive >/dev/null 2>&1"
+        ## sudo aws s3 cp --sse AES256 /home/ec2-user/guardian/dirs/$DIR/ s3://$S3BUCKET/$S3BACKUPDIR/$DIR/ --recursive >/dev/null 2>&1
+
+
+        echo "-- Downloding the latest configs for $DIR"
+        echo "-- Executing sudo aws s3 cp --sse AES256 s3://$S3BUCKET/$DIR/ /home/ec2-user/guardian/dirs/$DIR/ --recursive >/dev/null 2>&1"
+        ## sudo aws s3 cp --sse AES256 s3://$S3BUCKET/$DIR/ /home/ec2-user/guardian/dirs/$DIR/ --recursive >/dev/null 2>&1
+done

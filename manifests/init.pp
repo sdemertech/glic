@@ -1,6 +1,6 @@
-# == Class: guardian
+# == Class:  glic
 #
-# Full description of class guardian here.
+# Full description of class glic here.
 #
 # === Parameters
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { 'guardian':
+#  class { 'glic':
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #

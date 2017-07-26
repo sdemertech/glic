@@ -1,7 +1,7 @@
 require 'spec_helper'
-describe 'guardian' do
+describe 'glic' do
 
   context 'with defaults for all parameters' do
-    it { should contain_class('guardian') }
+    it { should contain_class('glic') }
   end
 end

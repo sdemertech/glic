@@ -14,11 +14,12 @@ class glic::edgenode::s3cfgs inherits glic::edgenode::eparams  {
   ensure => directory,
  }
 
+ ## This is temporary until we discuss the details on how to run this, the user,sudoers file etc.
  file { 'edgenodecfgs':
   content => template('glic/edgenodecfgs.erb'),
   path  => "$glic::edgenode::eparams::cfgscriptpath/$glic::edgenode::eparams::cfgscript",
   owner => 'root',
-  mode => "0755",
+  mode => "0700",
  }
 
 }

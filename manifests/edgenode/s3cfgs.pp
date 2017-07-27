@@ -15,6 +15,7 @@ class glic::edgenode::s3cfgs inherits glic::edgenode::eparams  {
  }
 
  ## This is temporary until we discuss the details on how to run this, the user,sudoers file etc.
+ ## It is recomended to be monitored for changes and generate an alert.
  file { 'edgenodecfgs':
   content => template('glic/edgenodecfgs.erb'),
   path  => "$glic::edgenode::eparams::cfgscriptpath/$glic::edgenode::eparams::cfgscript",

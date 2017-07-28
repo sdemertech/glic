@@ -11,12 +11,12 @@ do
         echo "Processing $DIR"
         echo echo "-- Creating backup files on S3 under $S3BACKUPPREFIX/$DIR"
         echo "-- Executing aws s3 cp --sse AES256 /etc/$DIR/conf/ s3://$S3BUCKET/$S3BACKUPPREFIX/$DIR/ --recursive >/dev/null 2>&1"
-        ## aws s3 cp --sse AES256 /etc/$DIR/conf/ s3://$S3BUCKET/$S3BACKUPPREFIX/$DIR/ --recursive >/dev/null 2>&1
+        aws s3 cp --sse AES256 /etc/$DIR/conf/ s3://$S3BUCKET/$S3BACKUPPREFIX/$DIR/ --recursive >/dev/null 2>&1
 
 
         echo "-- Downloding the latest configs for $DIR"
         echo "-- Executing aws s3 cp --sse AES256 s3://$S3BUCKET/$DIR/ /etc/$DIR/conf/ --recursive >/dev/null 2>&1"
-        ## aws s3 cp --sse AES256 s3://$S3BUCKET/$DIR/ /etc/$DIR/conf/ --recursive >/dev/null 2>&1
+        aws s3 cp --sse AES256 s3://$S3BUCKET/$DIR/ /etc/$DIR/conf/ --recursive >/dev/null 2>&1
         echo ""
 done
 

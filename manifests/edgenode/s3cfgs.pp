@@ -1,7 +1,6 @@
 class glic::edgenode::s3cfgs inherits glic::edgenode::eparams  {
 
- ## POC: Development Environment: use fqdn or hostname for now. This definately has to be brought up to the environment standards
- ## A section for production has to be added as needed
+ ## POC: Development Environment: use fqdn or hostname for now. This will probably be replaced by role or puppetRole "emr-support-edgenode".
  case $::fqdn {
     'ip-10-0-1-216.us-west-2.compute.internal', 'linuxagent.example.com' : {
 	$s3bucket = "$glic::edgenode::eparams::s3bucketdev"
